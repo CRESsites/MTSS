@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
@@ -104,6 +105,22 @@ hr{border:none;border-top:1px solid var(--gray);margin:16px 0}
 @media(max-width:650px){.team-card-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:450px){.team-card-grid{grid-template-columns:1fr}}
 @media print{nav{display:none}body{background:white}.card,.tier-panel{box-shadow:none;break-inside:avoid}}
+
+/* Progress Monitoring Cards */
+.pm-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:14px 0}
+.pm-card{border:1px solid var(--gray);border-radius:14px;background:white;overflow:hidden}
+.pm-head{padding:12px 14px;font-weight:800;color:white;font-size:14px}
+.pm-tier1 .pm-head{background:var(--blue)}
+.pm-tier2 .pm-head{background:var(--orange)}
+.pm-tier3 .pm-head{background:var(--red)}
+.pm-body{padding:14px}
+.pm-item{border-bottom:1px solid var(--gray);padding:9px 0}
+.pm-item:last-child{border-bottom:none}
+.pm-tool{font-weight:800;color:#111827;margin-bottom:3px;font-size:13px}
+.pm-meta{font-size:12.5px;color:var(--muted);line-height:1.45}
+.pm-meta strong{color:var(--text)}
+.pm-note{background:var(--blue-soft);border-left:6px solid var(--blue);border-radius:10px;padding:11px 13px;font-size:13px;margin-top:12px;color:#0A365F}
+@media(max-width:850px){.pm-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -112,9 +129,8 @@ hr{border:none;border-top:1px solid var(--gray);margin:16px 0}
 <p style="color:#fff;">Your all-staff reference for understanding and implementing MTSS at CRES. Use it to find the right support for every student at every level.</p>
 <p style="margin-top:8px;font-size:13px;color:rgba(255,255,255,0.75);">2026–27 School Year</p>
 </header>
-
 <nav>
-<button onclick="showTab('overview',this)" class="active">Overview</button>
+<button class="active" onclick="showTab('overview',this)">Overview</button>
 <button onclick="showTab('process',this)">MTSS Process</button>
 <button onclick="showTab('literacy',this)">Literacy</button>
 <button onclick="showTab('math',this)">Math</button>
@@ -123,12 +139,9 @@ hr{border:none;border-top:1px solid var(--gray);margin:16px 0}
 <button onclick="showTab('data',this)">Data &amp; Screeners</button>
 <button onclick="showTab('flowcharts',this)">Flowcharts</button>
 </nav>
-
 <div class="container">
-
 <!-- ======== OVERVIEW ======== -->
-<div id="overview" class="tab-section active">
-
+<div class="tab-section active" id="overview">
 <div class="card hero-card">
 <h2>How to Use This Playbook</h2>
 <p>MTSS at CRES is a <strong>school-wide system of support</strong> for every student. Every student receives Tier 1. Some students receive Tier 2 in addition to Tier 1. A few students receive Tier 3 in addition to Tier 1 and Tier 2. Use this playbook to understand what each tier looks like and how to respond when a student needs more.</p>
@@ -151,7 +164,6 @@ hr{border:none;border-top:1px solid var(--gray);margin:16px 0}
 </div>
 <div class="callout" style="margin-top:14px"><strong>Core + More:</strong> Tiers are additive and layered. A student in Tier 3 still receives Tier 1 core instruction every day. Intervention is never a replacement for grade-level access.</div>
 </div>
-
 <div class="card">
 <h2>Vision</h2>
 <h3>Creech Road Elementary School Vision Statement</h3>
@@ -160,14 +172,13 @@ hr{border:none;border-top:1px solid var(--gray);margin:16px 0}
 <p>Every student is uniquely capable and deserves to be challenged with meaningful learning experiences. We believe all students can learn, grow, and achieve without expectations centered around socioeconomic status, race, or ethnicity.</p>
 <p>Through our Collaborative Team process, staff use data to determine learning needs, monitor and adjust instruction, provide interventions, and plan extensions. MTSS requires an all-hands-on-deck approach to meet academic, behavioral, social-emotional, and attendance needs.</p>
 </div>
-
 <div class="card">
 <h2>MTSS Defined</h2>
 <div class="callout callout-blue">
 <strong>New Staff Quick Start</strong>
 <ol style="margin-top:8px;font-size:13px">
 <li>Read the MTSS definition below.</li>
-<li>Watch the MTSS Overview Video: <a href="https://www.youtube.com/watch?v=jBlPdIm_l7k" target="_blank" rel="noopener noreferrer">Open MTSS Overview Video</a></li>
+<li>Watch the MTSS Overview Video: <a href="https://www.youtube.com/watch?v=jBlPdIm_l7k" rel="noopener noreferrer" target="_blank">Open MTSS Overview Video</a></li>
 <li>Review the MTSS Process tab.</li>
 <li>Use the Literacy, Math, Behavior, or Attendance tabs when you have a student concern.</li>
 </ol>
@@ -180,7 +191,6 @@ hr{border:none;border-top:1px solid var(--gray);margin:16px 0}
 </div>
 <div class="callout" style="margin-top:14px"><strong>Core + More:</strong> Tier 2 and Tier 3 interventions are added on top of Tier 1. Students never lose access to grade-level instruction because they receive intervention.</div>
 </div>
-
 <div class="card">
 <h2>Six Critical Components of MTSS at CRES</h2>
 <p>These six components work together to ensure every student receives the academic, behavioral, social-emotional, and attendance support needed to succeed.</p>
@@ -194,7 +204,6 @@ hr{border:none;border-top:1px solid var(--gray);margin:16px 0}
 </div>
 <div class="callout callout-blue"><strong>How the components work together:</strong> Data identifies a concern. Problem Solving identifies the need. Multiple Tiers provide support. Communication keeps everyone informed. Infrastructure provides the systems and resources. Leadership ensures the work happens.</div>
 </div>
-
 <div class="card">
 <h2>Teams &amp; Roles</h2>
 <h3>Instructional Leadership Team</h3>
@@ -253,16 +262,15 @@ hr{border:none;border-top:1px solid var(--gray);margin:16px 0}
 <h3>Who Do I Contact?</h3>
 <table>
 <tr><th>Need Help With...</th><th>Contact</th></tr>
-<tr><td>Tier 1 instruction &amp; PLC process</td><td><span class="contact-name">Mrs. Edmundson</span> — Instructional Facilitator &nbsp;|&nbsp; <span class="contact-name">Mr. Copperwheat</span> (3rd) or <span class="contact-name">Mrs. Ramsey</span> (4th/5th) — MCL</td></tr>
+<tr><td>Tier 1 instruction &amp; PLC process</td><td><span class="contact-name">Mrs. Edmundson</span> — Instructional Facilitator  |  <span class="contact-name">Mr. Copperwheat</span> (3rd) or <span class="contact-name">Mrs. Ramsey</span> (4th/5th) — MCL</td></tr>
 <tr><td>Literacy concerns &amp; intervention</td><td><span class="contact-name">Mrs. Norman</span> — Literacy Coach</td></tr>
 <tr><td>MTSS process or intervention questions</td><td><span class="contact-name">Mrs. Combs</span> — Intervention Team Facilitator</td></tr>
-<tr><td>Behavior or SEL concerns</td><td><span class="contact-name">Ms. Johnson</span> or <span class="contact-name">Mr. Brown</span> — Counselors &nbsp;|&nbsp; <span class="contact-name">Mr. Sabatino</span> — Social Worker &nbsp;|&nbsp; Administration</td></tr>
-<tr><td>Attendance concerns</td><td><span class="contact-name">Mr. Sabatino</span> — Social Worker &nbsp;|&nbsp; Administration</td></tr>
-<tr><td>Special education questions</td><td><span class="contact-name">Dr. Daly</span> — Special Education &nbsp;|&nbsp; <span class="contact-name">Mrs. Morton</span> — Psychologist</td></tr>
-<tr><td>School leadership &amp; MTSS oversight</td><td><span class="contact-name">Dr. Chew</span> — Principal &nbsp;|&nbsp; <span class="contact-name">Mrs. Boykin</span> or <span class="contact-name">Mrs. Wood</span> — Assistant Principals</td></tr>
+<tr><td>Behavior or SEL concerns</td><td><span class="contact-name">Ms. Johnson</span> or <span class="contact-name">Mr. Brown</span> — Counselors  |  <span class="contact-name">Mr. Sabatino</span> — Social Worker  |  Administration</td></tr>
+<tr><td>Attendance concerns</td><td><span class="contact-name">Mr. Sabatino</span> — Social Worker  |  Administration</td></tr>
+<tr><td>Special education questions</td><td><span class="contact-name">Dr. Daly</span> — Special Education  |  <span class="contact-name">Mrs. Morton</span> — Psychologist</td></tr>
+<tr><td>School leadership &amp; MTSS oversight</td><td><span class="contact-name">Dr. Chew</span> — Principal  |  <span class="contact-name">Mrs. Boykin</span> or <span class="contact-name">Mrs. Wood</span> — Assistant Principals</td></tr>
 </table>
 </div>
-
 <div class="card">
 <h2>Staff Responsibilities by Pathway</h2>
 <table>
@@ -272,11 +280,9 @@ hr{border:none;border-top:1px solid var(--gray);margin:16px 0}
 <tr><td><strong>Academics</strong></td><td>Teach content standards using district resources. Bring classroom data, screeners, student work, and progress-monitoring evidence to PLC/Kid Talk. Implement agreed-upon core and intervention supports.</td><td>Support data review, intervention matching, progress monitoring, and documentation. Help teams identify the SAN and adjust supports using DBPS and ICEL/RIOT.</td><td>Support scheduling, resources, implementation fidelity, and problem solving when needs persist.</td></tr>
 </table>
 </div>
-
 </div><!-- end overview -->
-
 <!-- ======== MTSS PROCESS ======== -->
-<div id="process" class="tab-section">
+<div class="tab-section" id="process">
 <div class="card hero-card">
 <h2>MTSS Process: How Decisions Are Made</h2>
 <div class="step-row" style="margin:14px 0">
@@ -288,7 +294,6 @@ hr{border:none;border-top:1px solid var(--gray);margin:16px 0}
 </div>
 <div class="callout callout-blue"><strong>Core + More:</strong> Intervention does not replace Tier 1 instruction. Students continue receiving grade-level core instruction AND additional targeted support.</div>
 </div>
-
 <div class="card">
 <h2>PLC, Kid Talk, and DBPS</h2>
 <p>The problem-solving process begins with the grade-level team during PLC meetings. Teams use the Data to Action Protocol to collect and analyze data, make plans, and monitor impact. Departments may be invited by the grade-level chair, instructional coach, or ITF to attend PLC and/or Kid Talk meetings when data indicates a need.</p>
@@ -300,7 +305,6 @@ hr{border:none;border-top:1px solid var(--gray);margin:16px 0}
 <tr><td>Is the student still not responding after targeted support?</td><td>Review fidelity, intensity, match to need, attendance, and learner factors; consider Intervention Team support.</td></tr>
 </table>
 </div>
-
 <div class="card">
 <h2>ICEL / RIOT Framework</h2>
 <p>ICEL/RIOT is a problem-solving framework that helps teams avoid assuming the concern is automatically within the learner. Teams review <strong>Instruction, Curriculum, and Environment first</strong> before Learner factors.</p>
@@ -319,7 +323,6 @@ hr{border:none;border-top:1px solid var(--gray);margin:16px 0}
 <tr><td><strong>Test (T)</strong></td><td>Screeners, diagnostics, probes, inventories, surveys, rating scales, FBA-related data, progress monitoring.</td></tr>
 </table>
 </div>
-
 <div class="card">
 <h2>Infrastructure &amp; Capacity: Staff Learning and System Support</h2>
 <table>
@@ -333,9 +336,8 @@ hr{border:none;border-top:1px solid var(--gray);margin:16px 0}
 </table>
 </div>
 </div><!-- end process -->
-
 <!-- ======== LITERACY ======== -->
-<div id="literacy" class="tab-section">
+<div class="tab-section" id="literacy">
 <div class="card">
 <h2>Universal Tier 1 Instructional Practices</h2>
 <p>These practices support access to grade-level standards and should be considered before moving students to intervention.</p>
@@ -343,7 +345,6 @@ hr{border:none;border-top:1px solid var(--gray);margin:16px 0}
 <span class="tag tag-blue">Learning targets posted</span><span class="tag tag-blue">Learning targets unpacked</span><span class="tag tag-blue">Modeling &amp; Think-Alouds</span><span class="tag tag-blue">Checks for Understanding</span><span class="tag tag-blue">Concept Maps</span><span class="tag tag-blue">Venn Diagrams</span><span class="tag tag-blue">KWL Charts</span><span class="tag tag-blue">Sequence Charts</span><span class="tag tag-blue">T-Charts</span><span class="tag tag-orange">Vocabulary Pre-Teaching</span><span class="tag tag-orange">Word Banks</span><span class="tag tag-orange">Chunking Complex Texts/Tasks</span><span class="tag tag-orange">Think-Ink-Pair-Share</span><span class="tag tag-orange">Jigsaw</span><span class="tag tag-orange">Reciprocal Teaching</span><span class="tag tag-orange">Gallery Walks</span><span class="tag tag-green">Hook Your Learner Strategies</span><span class="tag tag-green">Research-Based Instructional Strategies</span>
 </div>
 </div>
-
 <div class="card hero-card">
 <h2>Literacy Pathway</h2>
 <table>
@@ -352,6 +353,56 @@ hr{border:none;border-top:1px solid var(--gray);margin:16px 0}
 <tr><td><strong>Tier 2</strong></td><td>Some students</td><td>K–2: Letterland Intervention; 3–5: Recipe for Reading</td><td>2–5 days/week · 45–60 min/week · max 8 students</td><td>mCLASS probes, intervention data</td></tr>
 <tr><td><strong>Tier 3</strong></td><td>Few students</td><td>Intensive literacy intervention aligned to SAN</td><td>4–5 days/week · 61–150 min/week · max 3 students</td><td>Frequent progress monitoring; Intervention Team review</td></tr>
 </table>
+</div>
+<div class="card">
+<h2>Literacy Progress Monitoring</h2>
+<p>Use these tools to monitor literacy progress by tier while maintaining access to grade-level core instruction.</p>
+<div class="pm-grid">
+<div class="pm-card pm-tier1">
+<div class="pm-head">Tier 1 Progress Monitoring</div>
+<div class="pm-body">
+<div class="pm-item">
+<div class="pm-tool">mCLASS Universal Screening</div>
+<div class="pm-meta"><strong>Frequency:</strong> At district benchmark windows as determined by WCPSS<br/><strong>Owner:</strong> Classroom Teacher</div>
+</div>
+<div class="pm-item">
+<div class="pm-tool">Classroom Assessments</div>
+<div class="pm-meta"><strong>Frequency:</strong> Ongoing throughout instruction<br/><strong>Examples:</strong> CFAs, module assessments, quizzes, checks for understanding<br/><strong>Owner:</strong> Classroom Teacher</div>
+</div>
+<div class="pm-item">
+<div class="pm-tool">Student Work Samples</div>
+<div class="pm-meta"><strong>Frequency:</strong> Ongoing throughout instruction<br/><strong>Owner:</strong> Classroom Teacher</div>
+</div>
+</div>
+</div>
+<div class="pm-card pm-tier2">
+<div class="pm-head">Tier 2 Progress Monitoring</div>
+<div class="pm-body">
+<div class="pm-item">
+<div class="pm-tool">Letterland / Recipe for Reading Data</div>
+<div class="pm-meta"><strong>Frequency:</strong> Every 1–2 weeks<br/><strong>Owner:</strong> Classroom Teacher</div>
+</div>
+<div class="pm-item">
+<div class="pm-tool">mCLASS Progress Monitoring</div>
+<div class="pm-meta"><strong>Frequency:</strong> As determined by the intervention plan<br/><strong>Owner:</strong> Classroom Teacher</div>
+</div>
+</div>
+</div>
+<div class="pm-card pm-tier3">
+<div class="pm-head">Tier 3 Progress Monitoring</div>
+<div class="pm-body">
+<div class="pm-item">
+<div class="pm-tool">Intervention Program Data</div>
+<div class="pm-meta"><strong>Frequency:</strong> Weekly<br/><strong>Owner:</strong> Intervention Provider / Intervention Team</div>
+</div>
+<div class="pm-item">
+<div class="pm-tool">mCLASS Progress Monitoring</div>
+<div class="pm-meta"><strong>Frequency:</strong> Weekly or as determined by the intensive intervention plan<br/><strong>Owner:</strong> Intervention Provider / Intervention Team</div>
+</div>
+</div>
+</div>
+</div>
+<div class="pm-note"><strong>Literacy PM Expectation:</strong> Monitor the specific literacy skill identified through DBPS. Review after 3–4 data points and use the 75% intervention response rule before changing or intensifying support.</div>
 </div>
 
 <div class="card">
@@ -363,26 +414,22 @@ hr{border:none;border-top:1px solid var(--gray);margin:16px 0}
 </div>
 <div class="callout callout-blue" style="margin-top:12px"><strong>Core + More:</strong> Literacy intervention is layered on top of Tier 1 core instruction. Intervention does not replace access to grade-level core instruction.</div>
 </div>
-
 <div class="tier-panel tier1"><div class="tier-title">Tier 1 Literacy — Core</div><div class="tier-body">
 <h4>What every student receives</h4>
 <ul class="checklist"><li>Standards-aligned core literacy instruction.</li><li>Learning targets posted and unpacked with students.</li><li>Vocabulary pre-teaching, word banks, sentence stems, graphic organizers, and comprehension scaffolds.</li><li>Small-group literacy instruction and checks for understanding.</li><li>Access to grade-level content with temporary scaffolds.</li></ul>
 <p><strong>Decision rule:</strong> If fewer than 80% of students or subgroups meet literacy benchmark, strengthen Tier 1 before identifying the concern as an individual intervention need.</p>
 </div></div>
-
 <div class="tier-panel tier2"><div class="tier-title">Tier 2 Literacy — Supplemental</div><div class="tier-body">
 <h4>Entry criteria</h4><ul class="checklist"><li>Below benchmark or repeated skill gap confirmed by multiple data sources.</li><li>Specific Area of Need identified through diagnostic review.</li><li>Student needs targeted support in addition to differentiated core.</li></ul>
 <h4>Resources</h4><ul class="checklist"><li>K–2: Letterland Intervention.</li><li>3–5: Recipe for Reading.</li><li>K–5 Literacy Intervention Guidance.</li></ul>
 <h4>Structure</h4><p>2–5 days per week · 45–60 minutes per week · no more than 8 students.</p>
 <h4>Response rule</h4><p>If fewer than 75% of the intervention group are responding AND/OR the individual student is not responding — review fidelity, focus, attendance, time, group size, and match to SAN.</p>
 </div></div>
-
 <div class="tier-panel tier3"><div class="tier-title">Tier 3 Literacy — Intensive</div><div class="tier-body">
 <h4>Entry criteria</h4><ul class="checklist"><li>Significant and persistent literacy need.</li><li>Limited response to matched Tier 2 support after data review and adjustments.</li><li>Need requires Intervention Team review and increased intensity.</li></ul>
 <h4>Resources</h4><ul class="checklist"><li>K–2: Letterland Intervention Strand.</li><li>3–5: Recipe for Reading.</li><li>Individualized intensive literacy plan aligned to SAN, documented in ECATS.</li></ul>
 <h4>Structure</h4><p>4–5 days per week · 61–150 minutes per week · no more than 3 students.</p>
 </div></div>
-
 <div class="card">
 <h2>Appendix A: Tier 1 Scaffolding</h2>
 <p>Scaffolding provides temporary, intentional supports that help all students access grade-level standards while maintaining rigor. Planned during lesson design and removed as students gain independence.</p>
@@ -398,15 +445,13 @@ hr{border:none;border-top:1px solid var(--gray);margin:16px 0}
 <tr><td><strong>Executive Function</strong></td><td>Modeled steps, timers and pacing tools, clear routines and procedures.</td></tr>
 </table>
 </div>
-
 <div class="card">
 <h2>Academic Benchmark Decision Rule for Literacy</h2>
 <p>During benchmark periods, teams consider all students' data to determine whether intervention supports are needed. Outside of a benchmark period, students who need additional support are brought to a Kid Talk meeting. Data sources include Letterland, mCLASS, NKT, AMC, classroom assessments, and NCCI depending on grade level.</p>
 </div>
 </div><!-- end literacy -->
-
 <!-- ======== MATH ======== -->
-<div id="math" class="tab-section">
+<div class="tab-section" id="math">
 <div class="card hero-card">
 <h2>Math Pathway</h2>
 <p>Use this section for concerns related to number sense, computation, problem solving, fluency, or grade-level math standards.</p>
@@ -416,6 +461,56 @@ hr{border:none;border-top:1px solid var(--gray);margin:16px 0}
 <tr><td><strong>Tier 2</strong></td><td>Some students</td><td>K–2: AMC/DNC/NCEnsi; 3–5: STAR/DreamBox/small-group instruction</td><td>2–5 days/week · 45–60 min/week · max 8 students</td><td>NCEnsi (K–2), STAR Math (3–5), DreamBox, intervention data</td></tr>
 <tr><td><strong>Tier 3</strong></td><td>Few students</td><td>Intensive math intervention aligned to SAN</td><td>4–5 days/week · 61–150 min/week · max 3 students</td><td>Frequent progress monitoring; Intervention Team review</td></tr>
 </table>
+</div>
+<div class="card">
+<h2>Math Progress Monitoring</h2>
+<p>Use these tools to monitor math progress by tier and keep the focus on the specific skill identified through DBPS.</p>
+<div class="pm-grid">
+<div class="pm-card pm-tier1">
+<div class="pm-head">Tier 1 Progress Monitoring</div>
+<div class="pm-body">
+<div class="pm-item">
+<div class="pm-tool">STAR Math / NKT Universal Screening</div>
+<div class="pm-meta"><strong>Frequency:</strong> At district benchmark windows as determined by WCPSS<br/><strong>Owner:</strong> Classroom Teacher</div>
+</div>
+<div class="pm-item">
+<div class="pm-tool">Classroom Assessments</div>
+<div class="pm-meta"><strong>Frequency:</strong> Ongoing throughout instruction<br/><strong>Examples:</strong> CFAs, module assessments, quizzes, checks for understanding<br/><strong>Owner:</strong> Classroom Teacher</div>
+</div>
+<div class="pm-item">
+<div class="pm-tool">Student Work Samples</div>
+<div class="pm-meta"><strong>Frequency:</strong> Ongoing throughout instruction<br/><strong>Owner:</strong> Classroom Teacher</div>
+</div>
+</div>
+</div>
+<div class="pm-card pm-tier2">
+<div class="pm-head">Tier 2 Progress Monitoring</div>
+<div class="pm-body">
+<div class="pm-item">
+<div class="pm-tool">NCEnsi Progress Monitoring</div>
+<div class="pm-meta"><strong>Frequency:</strong> Every 1–2 weeks<br/><strong>Owner:</strong> Classroom Teacher</div>
+</div>
+<div class="pm-item">
+<div class="pm-tool">Intervention Assessments</div>
+<div class="pm-meta"><strong>Frequency:</strong> Every 1–2 weeks<br/><strong>Examples:</strong> DNC, AMC-aligned checks, STAR/DreamBox data for 3–5<br/><strong>Owner:</strong> Classroom Teacher</div>
+</div>
+</div>
+</div>
+<div class="pm-card pm-tier3">
+<div class="pm-head">Tier 3 Progress Monitoring</div>
+<div class="pm-body">
+<div class="pm-item">
+<div class="pm-tool">NCEnsi Progress Monitoring</div>
+<div class="pm-meta"><strong>Frequency:</strong> Weekly<br/><strong>Owner:</strong> Intervention Provider / Intervention Team</div>
+</div>
+<div class="pm-item">
+<div class="pm-tool">Intervention Assessments</div>
+<div class="pm-meta"><strong>Frequency:</strong> Weekly<br/><strong>Examples:</strong> DNC, STAR Math, DreamBox, prerequisite skill checks<br/><strong>Owner:</strong> Intervention Provider / Intervention Team</div>
+</div>
+</div>
+</div>
+</div>
+<div class="pm-note"><strong>Math PM Expectation:</strong> Monitor the specific math skill identified through DBPS. Review after 3–4 data points, check fidelity and focus, and adjust intensity only after reviewing the data.</div>
 </div>
 
 <div class="card">
@@ -427,7 +522,7 @@ hr{border:none;border-top:1px solid var(--gray);margin:16px 0}
 <div class="gb-box"><div class="gb-label">Diagnostic</div><div class="gb-val">AMC</div></div>
 <div class="gb-box"><div class="gb-label">Intervention</div><div class="gb-val">DNC</div></div>
 </div>
-<p style="font-size:12px;color:#0A4278;margin-top:6px"><strong>Progress monitoring:</strong> NCEnsi &nbsp;|&nbsp; <strong>Core supplement:</strong> DreamBox</p>
+<p style="font-size:12px;color:#0A4278;margin-top:6px"><strong>Progress monitoring:</strong> NCEnsi  |  <strong>Core supplement:</strong> DreamBox</p>
 </div>
 <div class="box box-orange"><h3>3–5 Math</h3>
 <div class="gb-row">
@@ -435,36 +530,31 @@ hr{border:none;border-top:1px solid var(--gray);margin:16px 0}
 <div class="gb-box"><div class="gb-label">Diagnostic</div><div class="gb-val">Focus Skills Report</div></div>
 <div class="gb-box"><div class="gb-label">Intervention</div><div class="gb-val">DreamBox</div></div>
 </div>
-<p style="font-size:12px;color:#633806;margin-top:6px"><strong>Progress monitoring:</strong> STAR Math + DreamBox &nbsp;|&nbsp; Use NKT diagnostically if below 25th %ile on STAR</p>
+<p style="font-size:12px;color:#633806;margin-top:6px"><strong>Progress monitoring:</strong> STAR Math + DreamBox  |  Use NKT diagnostically if below 25th %ile on STAR</p>
 </div>
 </div>
 </div>
-
 <div class="tier-panel tier1"><div class="tier-title">Tier 1 Math — Core</div><div class="tier-body">
 <ul class="checklist"><li>Standards-aligned core math instruction.</li><li>Concrete–Representational–Abstract / CPA models.</li><li>Manipulatives, number talks, math discourse, and visual models.</li><li>DreamBox as a complement to core instruction.</li><li>Checks for understanding and formative assessment.</li></ul>
 <p><strong>Decision rule:</strong> If fewer than 80% of students or subgroups meet math benchmark, strengthen Tier 1 first.</p>
 </div></div>
-
 <div class="tier-panel tier2"><div class="tier-title">Tier 2 Math — Supplemental</div><div class="tier-body">
 <h4>Entry criteria</h4><ul class="checklist"><li>NKT, STAR Math, classroom assessments, NCCI, or student work shows repeated skill gap.</li><li>SAN identified through DBPS and diagnostic review.</li></ul>
 <h4>Resources</h4><ul class="checklist"><li>K–2: AMC diagnostic review, DNC intervention, NCEnsi progress monitoring.</li><li>3–5: STAR Math Instructional Planning Report / Focus Skills, DreamBox Learning, small-group instruction.</li></ul>
 <h4>Structure</h4><p>2–5 days per week · 45–60 minutes per week · no more than 8 students.</p>
 </div></div>
-
 <div class="tier-panel tier3"><div class="tier-title">Tier 3 Math — Intensive</div><div class="tier-body">
 <h4>Entry criteria</h4><ul class="checklist"><li>Significant and persistent math need.</li><li>Limited response to Tier 2 intervention after data review and adjustments.</li><li>Need requires Intervention Team review and increased intensity.</li></ul>
 <h4>Resources</h4><ul class="checklist"><li>K–2: Intensive DNC-aligned number sense support.</li><li>3–5: Intensive small-group support using STAR data, DreamBox, and prerequisite skill plans.</li><li>Intervention plan documented in ECATS.</li></ul>
 <h4>Structure</h4><p>4–5 days per week · 61–150 minutes per week · no more than 3 students.</p>
 </div></div>
-
 <div class="card">
 <h2>Academic Benchmark Decision Rule for Math</h2>
 <p>During benchmark periods, teams consider all students' data to determine whether intervention supports are needed. Outside of a benchmark period, students who need additional support are brought to a Kid Talk meeting. Data sources include NKT, STAR Math, AMC, DreamBox, NCCI, and classroom assessments depending on grade level.</p>
 </div>
 </div><!-- end math -->
-
 <!-- ======== BEHAVIOR ======== -->
-<div id="behavior" class="tab-section">
+<div class="tab-section" id="behavior">
 <div class="card hero-card">
 <h2>Behavior Pathway</h2>
 <p><strong>PBIS is the Tier 1 behavior framework at CRES.</strong> Second Step, Morning Meeting, restorative practices, and classroom routines support PBIS.</p>
@@ -475,25 +565,80 @@ hr{border:none;border-top:1px solid var(--gray);margin:16px 0}
 <tr><td><strong>Tier 3</strong></td><td>Few students</td><td>PTR, individualized plan, FBA-related data, intensive counseling/social work/admin supports</td><td>3–5 days/week · 5–30 min/week</td><td>Behavior goals, FBA data, team review</td></tr>
 </table>
 </div>
+<div class="card">
+<h2>Behavior Progress Monitoring</h2>
+<p>Use these tools to monitor behavior progress by tier while keeping PBIS as the Tier 1 behavior framework.</p>
+<div class="pm-grid">
+<div class="pm-card pm-tier1">
+<div class="pm-head">Tier 1 Progress Monitoring</div>
+<div class="pm-body">
+<div class="pm-item">
+<div class="pm-tool">Class Dojo Data</div>
+<div class="pm-meta"><strong>Frequency:</strong> Ongoing<br/><strong>Owner:</strong> Classroom Teacher</div>
+</div>
+<div class="pm-item">
+<div class="pm-tool">Behavior Referrals</div>
+<div class="pm-meta"><strong>Frequency:</strong> Ongoing<br/><strong>Owner:</strong> Classroom Teacher / Administration</div>
+</div>
+<div class="pm-item">
+<div class="pm-tool">Behavior Observations</div>
+<div class="pm-meta"><strong>Frequency:</strong> Ongoing<br/><strong>Owner:</strong> Classroom Teacher</div>
+</div>
+</div>
+</div>
+<div class="pm-card pm-tier2">
+<div class="pm-head">Tier 2 Progress Monitoring</div>
+<div class="pm-body">
+<div class="pm-item">
+<div class="pm-tool">Behavior Charts</div>
+<div class="pm-meta"><strong>Frequency:</strong> Weekly<br/><strong>Owner:</strong> Classroom Teacher</div>
+</div>
+<div class="pm-item">
+<div class="pm-tool">Check-In / Check-Out Data</div>
+<div class="pm-meta"><strong>Frequency:</strong> Weekly<br/><strong>Owner:</strong> Assigned Staff Member</div>
+</div>
+<div class="pm-item">
+<div class="pm-tool">Class Dojo Data</div>
+<div class="pm-meta"><strong>Frequency:</strong> Weekly<br/><strong>Owner:</strong> Classroom Teacher</div>
+</div>
+</div>
+</div>
+<div class="pm-card pm-tier3">
+<div class="pm-head">Tier 3 Progress Monitoring</div>
+<div class="pm-body">
+<div class="pm-item">
+<div class="pm-tool">PTR Data Collection</div>
+<div class="pm-meta"><strong>Frequency:</strong> Weekly<br/><strong>Owner:</strong> Assigned Provider / Behavior Team</div>
+</div>
+<div class="pm-item">
+<div class="pm-tool">Behavior Intervention Plan Data</div>
+<div class="pm-meta"><strong>Frequency:</strong> Weekly<br/><strong>Owner:</strong> Assigned Provider</div>
+</div>
+<div class="pm-item">
+<div class="pm-tool">ECATS Documentation</div>
+<div class="pm-meta"><strong>Frequency:</strong> Ongoing<br/><strong>Owner:</strong> Assigned Provider / Support Team</div>
+</div>
+</div>
+</div>
+</div>
+<div class="pm-note"><strong>Behavior PM Expectation:</strong> Monitor the desired/replacement behavior identified in the behavior plan. Review frequency, intensity, setting, and response to support before changing tiers.</div>
+</div>
 
 <div class="tier-panel tier1"><div class="tier-title">Tier 1 Behavior — PBIS / Core</div><div class="tier-body">
 <ul class="checklist"><li>PBIS / ROAR expectations explicitly taught, modeled, practiced, reinforced, and retaught.</li><li>Second Step SEL instruction.</li><li>Morning Meeting and relationship-building routines.</li><li>Positive reinforcement systems.</li><li>Restorative practices and classroom management systems.</li></ul>
 <p><strong>Before moving to Tier 2:</strong> Review PBIS expectation instruction, reinforcement frequency, routines, relationships, attendance, and access to instruction.</p>
 <p><strong>Decision rule:</strong> If fewer than 80% of students or subgroups are meeting behavior goals, review and strengthen Tier 1 before identifying as an individual intervention need.</p>
 </div></div>
-
 <div class="tier-panel tier2"><div class="tier-title">Tier 2 Behavior — Supplemental</div><div class="tier-body">
 <h4>Entry criteria</h4><ul class="checklist"><li>More than 2 ISS/OSS or more than 3 repeated incidents per quarter.</li><li>5 or more unexcused absences.</li><li>Inadequate response to school-wide behavior expectations.</li><li>Behaviors resulting in loss of instructional time or physical/emotional harm; referrals documented in ECATS.</li></ul>
 <h4>Resources</h4><ul class="checklist"><li>CICO (Check-In Check-Out).</li><li>Mentor.</li><li>Referral to SISP for individual or small-group sessions.</li><li>Supplemental Behavior Plan.</li><li>Lunch Detention / Tiger Turn Around.</li><li>Parent conference (face-to-face or virtual).</li></ul>
 <h4>Progress monitoring</h4><p>Class Dojo data tools, behavior charts, referral patterns, and goal tracking. The designee to teach desired/replacement behavior will be determined at the PTR meeting.</p>
 </div></div>
-
 <div class="tier-panel tier3"><div class="tier-title">Tier 3 Behavior — Intensive</div><div class="tier-body">
 <h4>Entry criteria</h4><ul class="checklist"><li>Plan moves to intensive based on data and adjustments to current interventions.</li><li>Student is not meeting 80% of behavior goals on Supplemental Plan.</li><li>Behavior results in loss of instructional time evidenced by charts, attendance, ISS, or OSS.</li></ul>
 <h4>Resources</h4><ul class="checklist"><li>PTR: Prevent, Teach, Reinforce plan made by the team.</li><li>FBA-related data collection.</li><li>Individualized behavior support with 3 or fewer students.</li><li>Parent conference with administrators and teachers.</li><li>Restorative actions in Tiger Turnaround and administrative consequences when appropriate.</li></ul>
 <h4>Notes</h4><p>The designee to teach desired/replacement behavior and environment decisions will be determined at the PTR team meeting.</p>
 </div></div>
-
 <div class="card">
 <h2>Additional CRES Behavior Decision Rules &amp; Tools</h2>
 <table>
@@ -503,9 +648,8 @@ hr{border:none;border-top:1px solid var(--gray);margin:16px 0}
 </table>
 </div>
 </div><!-- end behavior -->
-
 <!-- ======== ATTENDANCE ======== -->
-<div id="attendance" class="tab-section">
+<div class="tab-section" id="attendance">
 <div class="card hero-card">
 <h2>Attendance Pathway</h2>
 <p>Use this section when absences, tardies, or missed instruction may be impacting progress. <strong>Chronic absence means missing 10% or more of school days for any reason</strong> — excused, unexcused, or suspended.</p>
@@ -516,21 +660,68 @@ hr{border:none;border-top:1px solid var(--gray);margin:16px 0}
 <tr><td><strong>Tier 3</strong></td><td>10%+ missed days AND history of absenteeism</td><td>Social worker, home visit, community resources, court referral when appropriate</td><td>Social Worker, admin, attendance team</td></tr>
 </table>
 </div>
+<div class="card">
+<h2>Attendance Progress Monitoring</h2>
+<p>Use these tools to monitor attendance progress by tier and clarify who owns follow-up.</p>
+<div class="pm-grid">
+<div class="pm-card pm-tier1">
+<div class="pm-head">Tier 1 Progress Monitoring</div>
+<div class="pm-body">
+<div class="pm-item">
+<div class="pm-tool">Attendance Reports</div>
+<div class="pm-meta"><strong>Frequency:</strong> Monthly and as concerns arise<br/><strong>Owner:</strong> Classroom Teacher &amp; Attendance Team</div>
+</div>
+<div class="pm-item">
+<div class="pm-tool">Parent Communication Logs</div>
+<div class="pm-meta"><strong>Frequency:</strong> Ongoing<br/><strong>Owner:</strong> Classroom Teacher</div>
+</div>
+</div>
+</div>
+<div class="pm-card pm-tier2">
+<div class="pm-head">Tier 2 Progress Monitoring</div>
+<div class="pm-body">
+<div class="pm-item">
+<div class="pm-tool">Attendance Reports</div>
+<div class="pm-meta"><strong>Frequency:</strong> Biweekly<br/><strong>Owner:</strong> Attendance Team</div>
+</div>
+<div class="pm-item">
+<div class="pm-tool">Check-In Data</div>
+<div class="pm-meta"><strong>Frequency:</strong> Biweekly<br/><strong>Owner:</strong> Assigned Staff Member</div>
+</div>
+</div>
+</div>
+<div class="pm-card pm-tier3">
+<div class="pm-head">Tier 3 Progress Monitoring</div>
+<div class="pm-body">
+<div class="pm-item">
+<div class="pm-tool">Attendance Reports</div>
+<div class="pm-meta"><strong>Frequency:</strong> Weekly<br/><strong>Owner:</strong> Attendance Team</div>
+</div>
+<div class="pm-item">
+<div class="pm-tool">Social Worker Documentation</div>
+<div class="pm-meta"><strong>Frequency:</strong> Weekly / ongoing<br/><strong>Owner:</strong> School Social Worker</div>
+</div>
+<div class="pm-item">
+<div class="pm-tool">Attendance Intervention Documentation</div>
+<div class="pm-meta"><strong>Frequency:</strong> Weekly<br/><strong>Owner:</strong> Attendance Team</div>
+</div>
+</div>
+</div>
+</div>
+<div class="pm-note"><strong>Attendance PM Expectation:</strong> Monitor percentages, patterns, and outreach. Escalate support when attendance continues to decline or when Tier 2/Tier 3 thresholds are met.</div>
+</div>
 
 <div class="tier-panel tier1"><div class="tier-title">Tier 1 Attendance — Core</div><div class="tier-body">
 <ul class="checklist"><li>Track and record excused and unexcused absences per WCPSS policy.</li><li>Create a school climate that encourages daily attendance.</li><li>Use School Messenger and personalized family outreach.</li><li>Discuss attendance trends in PLCs.</li><li><strong>After 3 unexcused absences:</strong> Teacher contacts parent/guardian.</li><li><strong>After 6 unexcused absences:</strong> Data Manager sends 1700 mandatory attendance letter.</li></ul>
 </div></div>
-
 <div class="tier-panel tier2"><div class="tier-title">Tier 2 Attendance — Supplemental</div><div class="tier-body">
 <p><strong>Entry criteria:</strong> Student misses 5–9% of school days AND has a past history of missing school and/or a risk factor.</p>
 <ul class="checklist"><li>Caring-adult check-in to connect student with a supportive adult.</li><li>Data-based problem solving (EWS Indicators in ECATS).</li><li>Personalized family outreach.</li><li>Family/school conference (Principal, AP, Teacher, Counselor, Social Worker).</li><li>Connect to additional resources as needed (mental health, school nurse, etc.).</li></ul>
 </div></div>
-
 <div class="tier-panel tier3"><div class="tier-title">Tier 3 Attendance — Intensive</div><div class="tier-body">
 <p><strong>Entry criteria:</strong> Student misses 10% or more of school days AND has past absenteeism/risk factors.</p>
 <ul class="checklist"><li>Monitor attendance with multiple data points and circumstances.</li><li>Involve School Social Worker: determine good faith effort, conduct home visit when needed.</li><li>Monitor No Show process using Due Diligence Checklist when applicable.</li><li>Consider community resources or court referral when appropriate.</li><li>Explore alternative education options (modified schedules, before/after school wraparound).</li></ul>
 </div></div>
-
 <div class="card">
 <h2>Attendance Team Responsibilities</h2>
 <table>
@@ -541,9 +732,8 @@ hr{border:none;border-top:1px solid var(--gray);margin:16px 0}
 </table>
 </div>
 </div><!-- end attendance -->
-
 <!-- ======== DATA & SCREENERS ======== -->
-<div id="data" class="tab-section">
+<div class="tab-section" id="data">
 <div class="card hero-card">
 <h2>Data &amp; Screeners</h2>
 <p>Universal screening data is used to identify risk, determine benchmark status, analyze subgroup performance, inform Tier 1 improvements, and identify students who may need diagnostic review. All screeners are administered three times per year — Fall, Winter, and Spring — and data is reviewed by grade-level teams within two weeks of each window.</p>
@@ -556,7 +746,6 @@ hr{border:none;border-top:1px solid var(--gray);margin:16px 0}
 <tr><td><strong>Attendance</strong></td><td>Attendance reports, unexcused absence counts, chronic absenteeism data</td><td>Monitor Tier 1, identify Tier 2/Tier 3 attendance support needs</td></tr>
 </table>
 </div>
-
 <div class="card">
 <h2>Assessment System Workflows</h2>
 <table>
@@ -573,7 +762,6 @@ hr{border:none;border-top:1px solid var(--gray);margin:16px 0}
 <tr><td>Attendance</td><td>Attendance Reports</td><td>Unexcused absence thresholds, chronic absenteeism, and support planning.</td></tr>
 </table>
 </div>
-
 <div class="card">
 <h2>Universal Screening Review Lenses</h2>
 <table>
@@ -585,7 +773,6 @@ hr{border:none;border-top:1px solid var(--gray);margin:16px 0}
 <tr><td><strong>Learner Factors</strong></td><td>What patterns in attendance, prior knowledge, behavior, or motivation may be affecting response?</td></tr>
 </table>
 </div>
-
 <div class="card">
 <h2>Infrastructure &amp; Capacity Tools</h2>
 <table>
@@ -597,14 +784,12 @@ hr{border:none;border-top:1px solid var(--gray);margin:16px 0}
 </table>
 </div>
 </div><!-- end data -->
-
 <!-- ======== FLOWCHARTS ======== -->
-<div id="flowcharts" class="tab-section">
+<div class="tab-section" id="flowcharts">
 <div class="card hero-card">
 <h2>WCPSS Flowcharts</h2>
 <p>Use the WCPSS flowcharts as the official district reference. When in doubt, follow the flowchart and bring questions to PLC, coaches, ITF, or administration. All four flowcharts follow the same Data-Based Problem Solving (DBPS) model and <strong>Core + More</strong> framework.</p>
 </div>
-
 <div class="card">
 <div class="fc-tabs">
 <button class="fc-tab active" onclick="showFC('fc-lit',this)">Pre-K–8 Literacy</button>
@@ -612,9 +797,8 @@ hr{border:none;border-top:1px solid var(--gray);margin:16px 0}
 <button class="fc-tab" onclick="showFC('fc-beh',this)">Pre-K–12 Behavior</button>
 <button class="fc-tab" onclick="showFC('fc-att',this)">Pre-K–12 Attendance</button>
 </div>
-
 <div class="fc-panel active" id="fc-lit">
-<div class="callout callout-blue"><strong>Purpose:</strong> Outlines K–8 evidence-based literacy core instruction, interventions, and balanced assessment. Last updated July 2023. &nbsp;|&nbsp; <strong>Acronyms:</strong> D8 = DIBELS 8th edition · SAN = Specific Area of Need · ECATS = Every Child Accountability &amp; Tracking System</div>
+<div class="callout callout-blue"><strong>Purpose:</strong> Outlines K–8 evidence-based literacy core instruction, interventions, and balanced assessment. Last updated July 2023.  |  <strong>Acronyms:</strong> SAN = Specific Area of Need · ECATS = Every Child Accountability &amp; Tracking System</div>
 <table>
 <tr><th>Grade Band</th><th>Universal Screener</th><th>Intervention Resource</th><th>Progress Monitoring</th></tr>
 <tr><td><strong>K–3 Literacy</strong></td><td>mCLASS (DIBELS 8)</td><td>K–5 Literacy Intervention Guidance / Letterland</td><td>mCLASS probes</td></tr>
@@ -627,9 +811,8 @@ hr{border:none;border-top:1px solid var(--gray);margin:16px 0}
 </table>
 <div class="callout callout-blue" style="margin-top:12px"><strong>Key DBPS questions:</strong> Are 80% of students meeting benchmark? Are 80% of each subgroup? If yes, proceed to diagnostic assessment and SAN identification. If no, adjust core instruction with scaffolds and differentiation.</div>
 </div>
-
 <div class="fc-panel" id="fc-math">
-<div class="callout callout-blue"><strong>Purpose:</strong> Outlines K–8 evidence-based math core instruction, interventions, and balanced assessment. Last updated August 2025. &nbsp;|&nbsp; <strong>Acronyms:</strong> NKT = Number Knowledge Test · AMC = Assessing Math Concepts · DNC = Developing Number Concepts · NCEnsi = NC Early Numeracy Skills Inventory · DBL = DreamBox Learning</div>
+<div class="callout callout-blue"><strong>Purpose:</strong> Outlines K–8 evidence-based math core instruction, interventions, and balanced assessment. Last updated August 2025.  |  <strong>Acronyms:</strong> NKT = Number Knowledge Test · AMC = Assessing Math Concepts · DNC = Developing Number Concepts · NCEnsi = NC Early Numeracy Skills Inventory · DBL = DreamBox Learning</div>
 <table>
 <tr><th>Grade Band</th><th>Universal Screener</th><th>Intervention Resource</th><th>Progress Monitoring</th></tr>
 <tr><td><strong>K–2 Math</strong></td><td>NKT</td><td>DNC (Developing Number Concepts)</td><td>NCEnsi</td></tr>
@@ -642,9 +825,8 @@ hr{border:none;border-top:1px solid var(--gray);margin:16px 0}
 </table>
 <div class="callout" style="margin-top:12px"><strong>Key DBPS question:</strong> Are 75% of students in the intervention group responding? If yes, target next skills or plan for gradual release. If no, consider fidelity, modify intensity, or engage in further problem solving.</div>
 </div>
-
 <div class="fc-panel" id="fc-beh">
-<div class="callout callout-blue"><strong>Purpose:</strong> Guides school teams through tiered behavioral supports using DBPS. Core behavior = PBIS. &nbsp;|&nbsp; <strong>Core data sets:</strong> School Improvement Plan · Discipline Data · Attendance · BMAC Screener · NC Teacher Working Conditions Survey · WCPSS Student Engagement Survey</div>
+<div class="callout callout-blue"><strong>Purpose:</strong> Guides school teams through tiered behavioral supports using DBPS. Core behavior = PBIS.  |  <strong>Core data sets:</strong> School Improvement Plan · Discipline Data · Attendance · BMAC Screener · NC Teacher Working Conditions Survey · WCPSS Student Engagement Survey</div>
 <table>
 <tr><th>Tier</th><th>Core Supports</th><th>Frequency</th><th>Group Size</th></tr>
 <tr><td><strong>Tier 1</strong></td><td>PBIS, ROAR, Second Step, Morning Meeting, restorative practices, classroom management, Trauma-Informed Practices</td><td>Daily</td><td>All students</td></tr>
@@ -653,7 +835,6 @@ hr{border:none;border-top:1px solid var(--gray);margin:16px 0}
 </table>
 <div class="callout" style="margin-top:12px"><strong>Problem-solving thresholds:</strong> 2+ OSS/ISS or 3+ repeated incidents per quarter, OR 5+ unexcused absences, consider referral to Tier 2. Student not meeting 80% of Supplemental Plan behavior goals, consider Tier 3.</div>
 </div>
-
 <div class="fc-panel" id="fc-att">
 <div class="callout callout-blue"><strong>Compelling why:</strong> Chronic absence — missing 10% or more of school days for any reason — can translate into 3rd graders unable to master reading, 6th graders failing subjects, and 9th graders dropping out. Last updated June 2024.</div>
 <table>
@@ -664,7 +845,6 @@ hr{border:none;border-top:1px solid var(--gray);margin:16px 0}
 </table>
 </div>
 </div>
-
 <div class="card">
 <h2>When to Consider a Special Education Evaluation</h2>
 <p>A special education referral may be appropriate when a student has received intensive, individualized Tier 3 intervention with fidelity for <strong>8–12 weeks</strong> and data continues to show insufficient progress.</p>
@@ -675,7 +855,6 @@ hr{border:none;border-top:1px solid var(--gray);margin:16px 0}
 </div>
 <div class="callout callout-blue"><strong>Important:</strong> MTSS is not a prerequisite for special education evaluation. If there is reason to suspect a disability at any time, a referral can be made regardless of tier placement.</div>
 </div>
-
 <div class="card">
 <h2>Common WCPSS Acronyms</h2>
 <div class="grid-3">
@@ -685,9 +864,7 @@ hr{border:none;border-top:1px solid var(--gray);margin:16px 0}
 </div>
 </div>
 </div><!-- end flowcharts -->
-
 </div><!-- end container -->
-
 <script>
 function showTab(id, btn) {
   document.querySelectorAll('.tab-section').forEach(s => s.classList.remove('active'));
